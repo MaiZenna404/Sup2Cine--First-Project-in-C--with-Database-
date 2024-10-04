@@ -125,19 +125,27 @@ switch (userChoice)
             dbPath.AddSpectateurToSeanceDb(nomCinemaSeance, numSalleSeance, numDeSeance, heureDebutSeance, accesSeance, idFilmSeance, id_spectateurSeance);
         }
         // Test : Ok (mais à conditions d'enlever les conditions foreign keys)
-        
+
         else if (staffChoice == 2){
-            Console.WriteLine("Quel spectateur voulez-vous affecter à cette séance ?");
+            Console.WriteLine("A quel cinéma se déroule la séance VIP ?");
             string nomCinemaSeance = Console.ReadLine();
+             Console.WriteLine("Quel est l'ID du spectateur que vous voulez affecter à cette séance ?");
             int id_spectateurSeance = int.Parse(Console.ReadLine());
+            Console.WriteLine("Quelle est la matricule de la séance ?");
             int numDeSeance = int.Parse(Console.ReadLine());
+            Console.WriteLine("Quelle est l'heure de début de séance ?");
             string heureDebutSeance = Console.ReadLine();
+            Console.WriteLine("Qui a accès à la séance ?");
             string accesSeance = Console.ReadLine();
+            Console.WriteLine("Quel est l'ID du film de la séance ?");
             int idFilmSeance = int.Parse(Console.ReadLine());
+            Console.WriteLine("Quel est le numéro de la salle ?");
             int numSalleSeance = int.Parse(Console.ReadLine());
 
             dbPath.AddSpectateurToSeanceVIPDb(nomCinemaSeance, numSalleSeance, numDeSeance, heureDebutSeance, accesSeance, idFilmSeance, id_spectateurSeance);
         }
+        // Test : OK
+
         else if (staffChoice == 3)
         {
             Console.WriteLine("Veuillez saisir l'id du spectateur que vous voulez supprimer : ");
@@ -149,10 +157,11 @@ switch (userChoice)
         // Test : Ok
 
         else if(staffChoice == 4){
-            Console.WriteLine("Quel est le nom du spectateur VIP que vous voulez supprimer ?");
+            Console.WriteLine("Quel est l'ID du spectateur VIP que vous voulez supprimer ?");
             string idSpectateurVip = Console.ReadLine();
             dbPath.DeleteVIPToSeanceVIPFromDb(idSpectateurVip);
         }
+        // Test : Ok
 
         else if (staffChoice == 5)
         {
@@ -162,22 +171,24 @@ switch (userChoice)
             // Appel de la méthode VoirInfosSeance()
             dbPath.VoirInfosSeance(numeroSeance);
         }
+        // Test : à faire
         break;
 
     case "Spectateur":
         Console.WriteLine("Bienvenue sur notre plateforme cher spectateur ! Que souhaitez-vous faire ?");
-        Console.WriteLine("- Vérifier ma réservation \n Voir le synopsis d'un film \n ");
-        string viewerChoice = Console.ReadLine();
+        Console.WriteLine("1. Vérifier ma réservation \n 2. Voir le synopsis d'un film \n ");
+        int viewerChoice = int.Parse(Console.ReadLine());
 
-        if (viewerChoice == "Vérifier ma réservation")
+        if (viewerChoice == 1)
         {
             Console.WriteLine("A quel nom avez-vous effectué la réservation ? : ");
             string nomSpectateur = Console.ReadLine();
             // Appel de la méthode VerifierReservationSeance()
             dbPath.VerifierReservationSeance(nomSpectateur);
         }
+        // Test : Ok
 
-        else if (viewerChoice == "Voir le synopsis d'un film")
+        else if (viewerChoice == 2)
         {
             Console.WriteLine("Quel est le titre du film que vous recherchez ?");
             string rechercheFilm = Console.ReadLine();

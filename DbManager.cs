@@ -181,8 +181,8 @@ namespace DbManager
                 Console.WriteLine("Le film existe bien"); // Message qui apparaît si y'a des résultats
                 while (reader.Read())
                 {
-                    string details = reader.GetString(1);
-                    detailsFilm.Add(details);
+                    string details = reader.GetString(2); // Prendre la string de la colonne 2 (= description) qui est de type VarChar
+                    Console.WriteLine($"Voici le synopsis du film que vous cherchez : {details}");
                 }
             }
             else
@@ -269,7 +269,7 @@ namespace DbManager
                 while (reader.Read())
                 {
                     string descriptionFilm = reader.GetString(0);
-                    synopsis.Add(descriptionFilm);
+                    Console.WriteLine(descriptionFilm);
                 }
             }
             else
