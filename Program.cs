@@ -116,14 +116,16 @@ switch (userChoice)
         Console.WriteLine("- Vérifier ma réservation \n Voir le synopsis d'un film \n ");
         string viewerChoice = Console.ReadLine();
 
-        if(viewerChoice == "Vérifier ma réservation"){
+        if (viewerChoice == "Vérifier ma réservation")
+        {
             Console.WriteLine("A quel nom avez-vous effectué la réservation ? : ");
             string nomSpectateur = Console.ReadLine();
             // Appel de la méthode VerifierReservationSeance()
             dbPath.VerifierReservationSeance(nomSpectateur);
         }
 
-        else if (viewerChoice == "Voir le synopsis d'un film"){
+        else if (viewerChoice == "Voir le synopsis d'un film")
+        {
             Console.WriteLine("Quel est le titre du film que vous recherchez ?");
             string rechercheFilm = Console.ReadLine();
             // Appel de la méthode VoirSynopsis()
@@ -132,10 +134,10 @@ switch (userChoice)
 
         break;
 
-    default: 
+    default:
 
-    Console.WriteLine("Désolé, vous devez saisir un des 3 choix au-dessus...");
+        Console.WriteLine("Désolé, vous devez saisir un des 3 choix au-dessus...");
 
-    break;
+        break;
 
 }
