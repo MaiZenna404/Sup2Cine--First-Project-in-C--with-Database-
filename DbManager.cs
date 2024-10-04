@@ -1,3 +1,4 @@
+using System.Data;
 using MySqlConnector;
 
 namespace DbManager
@@ -25,6 +26,23 @@ namespace DbManager
             Console.WriteLine("Connexion avec la database OK !");
         }
 
+        // Ajouter un film dans la table film : 
+        public void AddFilmToDb(int idFilm, string titreDuFilm, string description, string realisateur, string dureeDuFilm)
+        {
+            // Requête pour ajouter un spectateur de la table "spectateur" :
+            using var command2 = connection.CreateCommand();
+            command2.CommandText = @"INSERT INTO `film`(`id_film`, `titre`, `description`, `realisateur`, `duree_du_film`) VALUES (@id_film, @titre, @description, @realisateur, duree_du_film)";
+            command2.Parameters.AddWithValue("@id_film", idFilm);
+            command2.Parameters.AddWithValue("@titre", titreDuFilm);
+            command2.Parameters.AddWithValue("@description", description);
+            command2.Parameters.AddWithValue("@realisateur", realisateur);
+            command2.Parameters.AddWithValue("@duree_du_film", dureeDuFilm);
+            command2.ExecuteNonQuery();
+            Console.WriteLine("Film inséré dans la base !");
+        }
+
+
+
         // Insérer un spectateur dans la table "spectateur" :
         public void AddSpectateurToDb(int id_spectateur, string nom, string prenom, string statut)
         {
@@ -38,6 +56,7 @@ namespace DbManager
             command2.ExecuteNonQuery();
             Console.WriteLine("Spectateur inséré dans la base !");
         }
+
         // Supprimer un spectateur de la table spectateur :
         public void DeleteSpectatorFromDB(string deleteSpectateur)
         {
@@ -49,20 +68,39 @@ namespace DbManager
             command2.ExecuteNonQuery();
             Console.WriteLine("Vous avez bien supprimé votre spectateur de la base.");
         }
+
         // Insérer une séance dans la table "liste_seance" :
         public void AddSeanceToDb(string nom_cinema, int num_salle, int num_seance, string heure_debut, string acces_seance, int id_film)
+
         {
             // Requête pour insérer une seance dans la table "liste_seance" :
             using var command2 = connection.CreateCommand();
             command2.CommandText = @"INSERT INTO `liste_seance`(`nom_cinema`, `num_salle`, `num_seance`, `heure_debut`, `acces_seance`, `id_film`) VALUES (@nom_cinema, @num_salle, @num_seance, @heure_debut, @acces_seance, @id_film)";
-            command2.Parameters.AddWithValue("@id_spectateur", nom_cinema);
-            command2.Parameters.AddWithValue("@nom", num_salle);
-            command2.Parameters.AddWithValue("@nom", num_seance);
-            command2.Parameters.AddWithValue("@prenom", heure_debut);
-            command2.Parameters.AddWithValue("@statut", acces_seance);
-            command2.Parameters.AddWithValue("@statut", id_film);
+            command2.Parameters.AddWithValue("@nom_cinema", nom_cinema);
+            command2.Parameters.AddWithValue("@num_salle", num_salle);
+            command2.Parameters.AddWithValue("@num_seance", num_seance);
+            command2.Parameters.AddWithValue("@heure_debut", heure_debut);
+            command2.Parameters.AddWithValue("@acces_seance", acces_seance);
+            command2.Parameters.AddWithValue("@id_film", id_film);
             command2.ExecuteNonQuery();
             Console.WriteLine("Séance insérée dans la base !");
+        }
+
+        // Insérer une VIP dans la table "liste_seanceVIP":
+
+        public void AddSeanceVIPToDb(string nom_cinema, int num_salle, int num_seance, string heure_debut, int id_film)
+
+        {
+            // Requête pour insérer une seance dans la table "liste_seance" :
+            using var command2 = connection.CreateCommand();
+            command2.CommandText = @"INSERT INTO `liste_seancevip`(`id_film`, `num_seance`, `num_salle`, `nom_cinema`, `heure_debut`) VALUES (@id_film, @num_seance,@num_salle, @nom_cinema, @heure_debut)";
+            command2.Parameters.AddWithValue("@nom_cinema", nom_cinema);
+            command2.Parameters.AddWithValue("@num_salle", num_salle);
+            command2.Parameters.AddWithValue("@num_seance", num_seance);
+            command2.Parameters.AddWithValue("@heure_debut", heure_debut);
+            command2.Parameters.AddWithValue("@id_film", id_film);
+            command2.ExecuteNonQuery();
+            Console.WriteLine("Séance VIP insérée dans la base !");
         }
 
         // Insérer un spectateur avec sa séance dans la table "seance" :
@@ -70,7 +108,7 @@ namespace DbManager
         {
             // Requête pour insérer un spectateur VIP dans la table "spectateur" :
             using var command2 = connection.CreateCommand();
-            command2.CommandText = @"INSERT INTO `liste_seance`(`nom_cinema`, `num_salle`, `num_seance`, `heure_debut`, `acces_seance`, `id_film`, `id_spectateur`) VALUES (@nom_cinema, @num_salle, @num_seance, @heure_debut, @acces_seance, @id_film, @id_spectateur)";
+            command2.CommandText = @"INSERT INTO `seance`(`nom_cinema`, `num_salle`, `num_seance`, `heure_debut`, `acces_seance`, `id_film`, `id_spectateur`) VALUES (@nom_cinema, @num_salle, @num_seance, @heure_debut, @acces_seance, @id_film, @id_spectateur)";
 
             command2.Parameters.AddWithValue("@nom_cinema", nomCinemaSeance);
             command2.Parameters.AddWithValue("@num_salle", numSalleSeance);
@@ -84,6 +122,24 @@ namespace DbManager
             Console.WriteLine("Spectateur avec sa séance insérée dans la base !");
         }
 
+        public void AddSpectateurToSeanceVIPDb(string nomCinemaSeance, int numSalleSeance, int numDeSeance, string heureDebutSeance, string accesSeance, int idFilmSeance, int id_spectateurSeance)
+        {
+            // Requête pour insérer un spectateur VIP dans la table "spectateur" :
+            using var command2 = connection.CreateCommand();
+            command2.CommandText = @"INSERT INTO `seance_vip`(`id_spectateur`, `acces_seance`, `num_seance`, `id_film`, `nom_cinema`) VALUES (@id_spectateur, @acces_seance, @num_seance, @id_film, @nom_cinema)";
+
+            command2.Parameters.AddWithValue("@nom_cinema", nomCinemaSeance);
+            command2.Parameters.AddWithValue("@num_salle", numSalleSeance);
+            command2.Parameters.AddWithValue("@num_seance", numDeSeance);
+            command2.Parameters.AddWithValue("@heure_debut", heureDebutSeance);
+            command2.Parameters.AddWithValue("@acces_seance", accesSeance);
+            command2.Parameters.AddWithValue("@id_film", idFilmSeance);
+            command2.Parameters.AddWithValue("@id_spectateur", id_spectateurSeance);
+
+            command2.ExecuteNonQuery();
+            Console.WriteLine("Spectateur avec sa séance VIP insérée dans la base !");
+        }
+
         public void DeleteSpectatorToSeanceFromDb(string deleteSpectateurFromSeanceDb)
         {
 
@@ -95,22 +151,19 @@ namespace DbManager
             Console.WriteLine("\nVous avez bien supprimé votre spectateur et sa séance de la base.");
         }
 
-        // Insérer un spectateur VIP dans la table "spectateur" :
-        /*
-        public void AddVIPToSeanceVIPToDb(int id_spectateurVIP, string nomVIP, string prenomVIP, string statutVIP)
+        // Insérer un spectateur VIP dans sa séance VIP dans la table "seance_vip" :
+        
+        public void DeleteVIPToSeanceVIPFromDb(string idSpectateurVip)
         {
-            // Requête pour insérer un spectateur VIP dans la table "spectateur" :
+            // Requête pour insérer un spectateur VIP dans sa séance VIP dans la table "seance_VIP" :
             using var command2 = connection.CreateCommand();
-            command2.CommandText = @"INSERT INTO `seance_vip`(`id_spectateur`, `statut`, `acces_seance`, `num_seance`, `id_film`) VALUES (@id_spectateur, @statut, @acces_seance, @num_seance, @id_film)";
-            command2.Parameters.AddWithValue("@id_spectateur", id_spectateurVIP);
-            command2.Parameters.AddWithValue("@nom", nomVIP);
-            command2.Parameters.AddWithValue("@prenom", prenomVIP);
-            command2.Parameters.AddWithValue("@statut", statutVIP);
+            command2.CommandText = @"DELETE FROM `seance_vip` WHERE id_spectateur = @deleteVipName";
+            command2.Parameters.AddWithValue("@deleteVipName", idSpectateurVip);
+            
             command2.ExecuteNonQuery();
-            Console.WriteLine("Spectateur inséré dans sa séance VIP insérée dans la base !");
+            Console.WriteLine("Spectateur et sa séance VIP correspondante ont bien été supprimé de la base !");
         }
-    */
-
+    
         // Voir les infos d'un film :
         public List<string> VoirFilm(string titre)
         {
@@ -125,10 +178,10 @@ namespace DbManager
 
             if (reader.HasRows) // Vérfie si la Db retourne bien un ou plusieurs résultats
             {
-                Console.WriteLine("Le film existe bien"); // Debug statement to verify rows are found
+                Console.WriteLine("Le film existe bien"); // Message qui apparaît si y'a des résultats
                 while (reader.Read())
                 {
-                    string details = reader.GetString(0);
+                    string details = reader.GetString(1);
                     detailsFilm.Add(details);
                 }
             }
@@ -141,7 +194,7 @@ namespace DbManager
             return detailsFilm;
         }
 
-        // Voir les infos d'une seance : 
+        // Voir les infos d'une seance :
         public List<string> VoirInfosSeance(int numeroSeance)
         {
             List<string> detailsSeance = new List<string>();
