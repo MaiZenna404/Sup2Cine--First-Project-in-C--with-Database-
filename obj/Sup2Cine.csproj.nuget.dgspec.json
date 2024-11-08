@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\MaiTHAN\\OneDrive - SUP DE VINCI\\Documents\\Cours CSharp\\ExamCSharp\\Sup2Cine\\Sup2Cine.csproj": {}
+    "C:\\Users\\MaiTHAN\\OneDrive - SUP DE VINCI\\Documents\\Cours CSharp\\Mai_THAN_ ExamC#\\Mai_THAN_ ExamC#\\Sup2Cine\\Sup2Cine.csproj": {}
   },
   "projects": {
-    "C:\\Users\\MaiTHAN\\OneDrive - SUP DE VINCI\\Documents\\Cours CSharp\\ExamCSharp\\Sup2Cine\\Sup2Cine.csproj": {
+    "C:\\Users\\MaiTHAN\\OneDrive - SUP DE VINCI\\Documents\\Cours CSharp\\Mai_THAN_ ExamC#\\Mai_THAN_ ExamC#\\Sup2Cine\\Sup2Cine.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\MaiTHAN\\OneDrive - SUP DE VINCI\\Documents\\Cours CSharp\\ExamCSharp\\Sup2Cine\\Sup2Cine.csproj",
+        "projectUniqueName": "C:\\Users\\MaiTHAN\\OneDrive - SUP DE VINCI\\Documents\\Cours CSharp\\Mai_THAN_ ExamC#\\Mai_THAN_ ExamC#\\Sup2Cine\\Sup2Cine.csproj",
         "projectName": "Sup2Cine",
-        "projectPath": "C:\\Users\\MaiTHAN\\OneDrive - SUP DE VINCI\\Documents\\Cours CSharp\\ExamCSharp\\Sup2Cine\\Sup2Cine.csproj",
+        "projectPath": "C:\\Users\\MaiTHAN\\OneDrive - SUP DE VINCI\\Documents\\Cours CSharp\\Mai_THAN_ ExamC#\\Mai_THAN_ ExamC#\\Sup2Cine\\Sup2Cine.csproj",
         "packagesPath": "C:\\Users\\MaiTHAN\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\MaiTHAN\\OneDrive - SUP DE VINCI\\Documents\\Cours CSharp\\ExamCSharp\\Sup2Cine\\obj\\",
+        "outputPath": "C:\\Users\\MaiTHAN\\OneDrive - SUP DE VINCI\\Documents\\Cours CSharp\\Mai_THAN_ ExamC#\\Mai_THAN_ ExamC#\\Sup2Cine\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\MaiTHAN\\AppData\\Roaming\\NuGet\\NuGet.Config",

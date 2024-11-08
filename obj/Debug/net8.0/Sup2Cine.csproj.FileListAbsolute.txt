@@ -16,3 +16,21 @@ C:\Users\MaiTHAN\OneDrive - SUP DE VINCI\Documents\Cours CSharp\ExamCSharp\Sup2C
 C:\Users\MaiTHAN\OneDrive - SUP DE VINCI\Documents\Cours CSharp\ExamCSharp\Sup2Cine\obj\Debug\net8.0\Sup2Cine.pdb
 C:\Users\MaiTHAN\OneDrive - SUP DE VINCI\Documents\Cours CSharp\ExamCSharp\Sup2Cine\obj\Debug\net8.0\Sup2Cine.genruntimeconfig.cache
 C:\Users\MaiTHAN\OneDrive - SUP DE VINCI\Documents\Cours CSharp\ExamCSharp\Sup2Cine\obj\Debug\net8.0\ref\Sup2Cine.dll
+C:\Users\MaiTHAN\OneDrive - SUP DE VINCI\Documents\Cours CSharp\Mai_THAN_ ExamC#\Mai_THAN_ ExamC#\Sup2Cine\bin\Debug\net8.0\Sup2Cine.exe
+C:\Users\MaiTHAN\OneDrive - SUP DE VINCI\Documents\Cours CSharp\Mai_THAN_ ExamC#\Mai_THAN_ ExamC#\Sup2Cine\bin\Debug\net8.0\Sup2Cine.deps.json
+C:\Users\MaiTHAN\OneDrive - SUP DE VINCI\Documents\Cours CSharp\Mai_THAN_ ExamC#\Mai_THAN_ ExamC#\Sup2Cine\bin\Debug\net8.0\Sup2Cine.runtimeconfig.json
+C:\Users\MaiTHAN\OneDrive - SUP DE VINCI\Documents\Cours CSharp\Mai_THAN_ ExamC#\Mai_THAN_ ExamC#\Sup2Cine\bin\Debug\net8.0\Sup2Cine.dll
+C:\Users\MaiTHAN\OneDrive - SUP DE VINCI\Documents\Cours CSharp\Mai_THAN_ ExamC#\Mai_THAN_ ExamC#\Sup2Cine\bin\Debug\net8.0\Sup2Cine.pdb
+C:\Users\MaiTHAN\OneDrive - SUP DE VINCI\Documents\Cours CSharp\Mai_THAN_ ExamC#\Mai_THAN_ ExamC#\Sup2Cine\bin\Debug\net8.0\Microsoft.Extensions.Logging.Abstractions.dll
+C:\Users\MaiTHAN\OneDrive - SUP DE VINCI\Documents\Cours CSharp\Mai_THAN_ ExamC#\Mai_THAN_ ExamC#\Sup2Cine\bin\Debug\net8.0\MySqlConnector.dll
+C:\Users\MaiTHAN\OneDrive - SUP DE VINCI\Documents\Cours CSharp\Mai_THAN_ ExamC#\Mai_THAN_ ExamC#\Sup2Cine\obj\Debug\net8.0\Sup2Cine.csproj.AssemblyReference.cache
+C:\Users\MaiTHAN\OneDrive - SUP DE VINCI\Documents\Cours CSharp\Mai_THAN_ ExamC#\Mai_THAN_ ExamC#\Sup2Cine\obj\Debug\net8.0\Sup2Cine.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\MaiTHAN\OneDrive - SUP DE VINCI\Documents\Cours CSharp\Mai_THAN_ ExamC#\Mai_THAN_ ExamC#\Sup2Cine\obj\Debug\net8.0\Sup2Cine.AssemblyInfoInputs.cache
+C:\Users\MaiTHAN\OneDrive - SUP DE VINCI\Documents\Cours CSharp\Mai_THAN_ ExamC#\Mai_THAN_ ExamC#\Sup2Cine\obj\Debug\net8.0\Sup2Cine.AssemblyInfo.cs
+C:\Users\MaiTHAN\OneDrive - SUP DE VINCI\Documents\Cours CSharp\Mai_THAN_ ExamC#\Mai_THAN_ ExamC#\Sup2Cine\obj\Debug\net8.0\Sup2Cine.csproj.CoreCompileInputs.cache
+C:\Users\MaiTHAN\OneDrive - SUP DE VINCI\Documents\Cours CSharp\Mai_THAN_ ExamC#\Mai_THAN_ ExamC#\Sup2Cine\obj\Debug\net8.0\Sup2Cine.csproj.Up2Date
+C:\Users\MaiTHAN\OneDrive - SUP DE VINCI\Documents\Cours CSharp\Mai_THAN_ ExamC#\Mai_THAN_ ExamC#\Sup2Cine\obj\Debug\net8.0\Sup2Cine.dll
+C:\Users\MaiTHAN\OneDrive - SUP DE VINCI\Documents\Cours CSharp\Mai_THAN_ ExamC#\Mai_THAN_ ExamC#\Sup2Cine\obj\Debug\net8.0\refint\Sup2Cine.dll
+C:\Users\MaiTHAN\OneDrive - SUP DE VINCI\Documents\Cours CSharp\Mai_THAN_ ExamC#\Mai_THAN_ ExamC#\Sup2Cine\obj\Debug\net8.0\Sup2Cine.pdb
+C:\Users\MaiTHAN\OneDrive - SUP DE VINCI\Documents\Cours CSharp\Mai_THAN_ ExamC#\Mai_THAN_ ExamC#\Sup2Cine\obj\Debug\net8.0\Sup2Cine.genruntimeconfig.cache
+C:\Users\MaiTHAN\OneDrive - SUP DE VINCI\Documents\Cours CSharp\Mai_THAN_ ExamC#\Mai_THAN_ ExamC#\Sup2Cine\obj\Debug\net8.0\ref\Sup2Cine.dll

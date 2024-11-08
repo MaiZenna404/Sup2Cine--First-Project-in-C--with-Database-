@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Sup2Cine")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+9d862827acefcb646a4f09c1159ace55e86243b1")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+82cb2ea9536614edfcad51d709dd4b002990c754")]
 [assembly: System.Reflection.AssemblyProductAttribute("Sup2Cine")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Sup2Cine")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
